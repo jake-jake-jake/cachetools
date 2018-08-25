@@ -1,4 +1,10 @@
 from collections.abc import MutableMapping
+from functools import partial
+
+
+def make_func(func, *args, **kwargs):
+    return partial(func, *args, **kwargs)
+
 
 class DictCache(MutableMapping):
     """ Cache class that presents itself like a dict. On key assignment, if value is a callable,
