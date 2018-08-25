@@ -1,6 +1,6 @@
 from collections.abc import MutableMapping
 
-class Cache(MutableMapping):
+class DictCache(MutableMapping):
     """ Cache class that presents itself like a dict. On key assignment, if value is a callable,
         it will only be called on key look up."""
     
@@ -42,5 +42,3 @@ class Cache(MutableMapping):
         for key, tup in self._cache.items():
             self._cache[key] = tup[0], None
 
-
-           
