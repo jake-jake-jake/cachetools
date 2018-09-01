@@ -2,7 +2,7 @@
 Useful pythonic classes for lazily caching expensive lookups.
 
 ## Installation
-Either from pypi with `pip install cachetools` or by cloning the repo and installing via `setup.py`
+By cloning the repo and installing via `setup.py`
 
 ## Usage
 ```
