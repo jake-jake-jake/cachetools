@@ -12,7 +12,7 @@ def test_cache():
     assert NUMBER_OF_CALLS == 0
     
     # init cache and give it both callables and values
-    c = DictCache(10)
+    c = DictCache()
     c['key'] = do_a_call
     c['another key'] = 5
     assert NUMBER_OF_CALLS == 0

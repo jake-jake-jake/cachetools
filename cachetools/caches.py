@@ -1,4 +1,8 @@
-from collections.abc import MutableMapping
+try:
+    from collections.abc import MutableMapping
+except ImportError:
+    from collections import MutableMapping
+
 from functools import partial
 
 
@@ -10,8 +14,7 @@ class DictCache(MutableMapping):
     """ Cache class that presents itself like a dict. On key assignment, if value is a callable,
         it will only be called on key look up."""
     
-    def __init__(self, max_size, *args, **kwargs):
-        self.max_size = max_size
+    def __init__(self, *args, **kwargs):
         self._cache = {}
 
     def __getitem__(self, key):

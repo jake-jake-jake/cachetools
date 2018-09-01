@@ -1,2 +1,2 @@
-from caches import DictCache
+from .caches import DictCache, make_func
 
